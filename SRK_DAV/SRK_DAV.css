@@ -1,0 +1,1291 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* FIX BODY SCROLL BEHAVIOR */
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+  color: black;
+  font-family: "Poppins", sans-serif;
+}
+
+/*============================  HEADER  ==============================*/
+
+/*==========================  NAVBAR1 SECTION  ===========================*/
+
+#navbar1 {
+  width: 100%;
+  color: white;
+  background: #0c58a2;
+}
+
+/* FLEX MENU – OVERFLOW SAFE */
+#navbar1-menu-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 5px;
+
+  /* RESPONSIVE PADDING – NO OVERFLOW */
+  padding: 10px clamp(16px, 5vw, 100px) 10px clamp(16px, 3vw, 40px);
+
+  list-style: none;
+}
+
+/* FLEX ITEMS */
+#navbar1-menu-list li {
+  font-size: 9pt;
+  border-right: 1px solid #087ae1;
+  padding-left: 2px;
+  padding-right: 7px;
+  white-space: nowrap;
+}
+
+/* LAST ITEM FIX */
+#navbar1-menu-list li:last-child {
+  border-right: none;
+}
+
+/* TEXT & HOVER */
+#navbar1-menu-list li {
+  color: #ffffff;
+  opacity: 1;
+  transition: 0.3s;
+}
+
+#navbar1-menu-list li:hover {
+  color: #fff;
+  opacity: 1;
+  border-bottom: 1px dashed yellow;
+}
+
+/*========================  SCHOOL NAME SECTION  ========================*/
+
+#school-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  padding: 0px 50px;
+}
+
+#srk-dav-logo {
+  box-sizing: border-box;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+#srk-dav-logo img {
+  width: 120px;
+  padding: 10px;
+}
+
+#school-name {
+  margin-left: 5px;
+}
+
+#school-name-h1 {
+  margin-bottom: 5px;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #000;
+  text-transform: uppercase;
+  text-align: unset;
+}
+
+#school-address {
+  font-size: 13px;
+}
+
+/*===========================  NAVBAR2 SECTION  ==========================*/
+
+#navbar2-section {
+  background: linear-gradient(90deg, #26a8f2 0%, #8abf57 50%) !important;
+  color: rgb(0, 0, 0);
+  font-family: Arial, sans-serif;
+  width: 100%;
+}
+
+#navbar2-container {
+  width: 100%;
+}
+
+#navbar2 {
+  padding: 4px 60px;
+}
+
+#navbar2-menu-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5px 0;
+  font-size: 12px;
+}
+
+#navbar2-menu-list > li {
+  position: relative;
+  cursor: pointer;
+  padding: 5px 5px;
+  margin: 0;
+  font-weight: bold;
+  border-top: 2px solid transparent;
+  border-right: 1px solid rgb(25, 135, 84) !important;
+  transition: transform 0.3s ease;
+}
+
+#navbar2-menu-list li:last-child {
+  border-right: none;
+}
+
+#navbar2-menu-list > li:hover {
+  cursor: pointer;
+  opacity: 1;
+  z-index: 1;
+  border-top: 1px solid #a20327;
+  transform: scale(1.04);
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 0;
+  background-color: #ffffff;
+  min-width: 220px;
+  list-style: none;
+  z-index: 1000;
+}
+
+.dropdown-icon {
+  color: rgb(232, 232, 232);
+}
+
+.dropdown-menu li {
+  padding: 10px;
+  border-bottom: 1px solid #555;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown::after {
+  font-size: 0.7em;
+}
+
+/* ---------------- RESPONSIVE SAFETY ---------------- */
+
+@media (max-width: 768px) {
+  #navbar2 {
+    padding: 4px 20px;
+  }
+
+  #navbar2-menu-list > li > .dropdown-menu {
+    min-width: 180px;
+  }
+}
+
+/*=============================== SECTION-1 ==============================*/
+
+/*======================== IMAGE SECTION ============================*/
+
+#section-1 {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.slider-wrapper {
+  position: relative;
+  width: 60%;
+  max-width: 900px;
+  margin: 0 0 auto 50px;
+  overflow: hidden;
+  border-radius: 2%;
+}
+
+.slider-track {
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+}
+
+.school-function-image-1 {
+  min-width: 100%;
+  position: relative;
+}
+
+.function-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  margin: 0;
+}
+
+.school-function-caption-1 {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: -10px 0 0 0;
+  list-style: none;
+  text-align: center;
+  background: #dc3545;
+  color: #fff;
+  border: 1px solid rgb(0, 0, 0);
+}
+
+/* Arrows */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.4);
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 20;
+}
+
+.arrow-left {
+  left: 10px;
+}
+
+.arrow-right {
+  right: 10px;
+}
+
+.arrow:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+#notice-board-container {
+  width: 40%;
+}
+
+/*===================== Main Notice Board container ======================*/
+
+#notice-board-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 35%;
+  /* CHANGE WIDTH */
+  background: #ffffff;
+  padding: 0 15px;
+  font-family: Arial, sans-serif;
+}
+
+/* Heading */
+#notice-board-heading {
+  width: 360px;
+  text-align: center;
+  background: rgb(15, 91, 158);
+  color: rgb(255, 255, 255) !important;
+  padding: 2px;
+  font-size: 2rem;
+  font-weight: 700;
+  /* POLYGON SHAPE */
+  clip-path: polygon(
+    0% 0%,
+    /* top-left */ 100% 0%,
+    /* top-right */ 95% 100%,
+    /* bottom-right (inward to make bottom shorter) */ 5% 100%
+      /* bottom-left (inward to make bottom shorter) */
+  );
+}
+
+/* Notice Board box */
+.notice-board-1 {
+  height: 330px;
+  overflow: hidden;
+}
+
+/* Marquee content */
+.notice-board-scroll-1 {
+  height: 100%;
+}
+
+.notice-board-1 ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+/* List items */
+.notice-board-1 ul li {
+  padding: 10px;
+  margin-bottom: 15px;
+  background: #f8f8f8;
+}
+
+.dateAndDownload {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  width: 60%;
+  margin-top: 10px;
+  padding: 4px 0;
+  background: rgba(12, 88, 162, 0.5);
+  position: relative;
+}
+
+.dateAndDownload h3 {
+  font-weight: normal !important;
+  font-size: 15px;
+}
+
+.img-fluid {
+  position: absolute;
+  right: -25px;
+  top: 45%;
+  transform: translateY(-50%) rotate(-10deg);
+  max-width: 3rem;
+  pointer-events: none;
+}
+
+#view {
+  text-align: center;
+  margin-top: 15px;
+  padding: 10px 70px;
+  background: rgb(15, 91, 158);
+  border-radius: 5px;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.viewAllBtn a {
+  display: inline-block;
+  background: linear-gradient(135deg, #0f5b9e, #1b76c5);
+  color: #fff;
+  padding: 10px 24px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.viewAllBtn a:hover {
+  background: linear-gradient(135deg, #1b76c5, #0f5b9e);
+  transform: translateY(-2px);
+}
+
+/* ------------------------- Notification Panel -------------------------*/
+
+#notificationPanel {
+  width: 100%;
+  margin: 30px 0px;
+}
+
+#notification-panel-container {
+  width: 100%;
+}
+
+.notification-panel-container1 {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 80px;
+  gap: 20px;
+}
+
+.notification-panel-container2 {
+  flex: 1;
+  border-radius: 10px;
+}
+
+.notification-panel-container3 {
+  text-align: center;
+  border-radius: 1rem;
+  height: 100%;
+}
+
+.notification-panel-container3 .cardImg {
+  box-shadow:
+    rgba(0, 0, 0, 0.09) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 4px 2px,
+    rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    rgba(0, 0, 0, 0.09) 0px 16px 8px,
+    rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  width: 5rem;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 5rem;
+  margin: 0 auto;
+  background: #fff;
+}
+
+.notification-panel-container2
+  .notification-panel-container3:hover
+  .cardImg
+  img {
+  transition: all 1.2s;
+  transform: rotate(360deg);
+}
+
+.notification-panel-container2:first-child {
+  background: #c95042;
+  border: 1px solid dark rgba(174, 6, 6, 0.729);
+}
+
+.notification-panel-container2:nth-child(2) {
+  background: #f1c14f;
+  border: 1px solid dark rgba(174, 6, 6, 0.729);
+}
+
+.notification-panel-container2:nth-child(3) {
+  background: #b5d46d;
+  border: 1px solid dark rgba(174, 6, 6, 0.729);
+}
+
+.notification-panel-container2:nth-child(4) {
+  background: #e96f65;
+  border: 1px solid dark rgba(174, 6, 6, 0.729);
+}
+
+.notification-panel-container2:last-child {
+  background: #d1282e;
+  border: 1px solid dark rgba(174, 6, 6, 0.729);
+}
+
+.card-title a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.images {
+  position: relative;
+  top: 10px;
+  width: 50%;
+}
+
+.notification-panel-container3:hover {
+  background: #917979;
+  margin-top: -10px;
+}
+
+/* ---------------------------- MESSAGE SECTION -------------------------*/
+
+#messages {
+  width: 100%;
+  display: flex;
+  margin: 40px 0;
+
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.messages-container1 {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  margin-top: -20px;
+  padding-inline: clamp(10px, 4vw, 40px);
+
+  box-sizing: border-box;
+}
+
+/* Left message card */
+.messages-container6 {
+  display: flex;
+  flex-direction: column;
+
+  flex: 1 1 300px;
+  max-width: 35%;
+
+  min-height: 100vh;
+  margin: 20px;
+
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Middle message card */
+.messages-container7 {
+  display: flex;
+  flex-direction: column;
+
+  flex: 1 1 300px;
+  max-width: 35%;
+
+  min-height: 100vh;
+  margin: 20px;
+
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Right sidebar */
+.messages-container2 {
+  display: flex;
+  flex-direction: column;
+
+  flex: 1 1 220px;
+  max-width: 20%;
+
+  min-height: 100vh;
+  margin: 20px;
+
+  background: #fff;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Titles */
+.cardHeaderTitle {
+  padding: 15px 0 15px 20px;
+  background: linear-gradient(to bottom, #32a0dd, #80b66b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+/* Images */
+.card-img-top {
+  width: 100%;
+  height: auto;
+}
+
+/* Card body */
+.card-body {
+  margin: 10px;
+}
+
+/* Footer */
+.card-footer {
+  text-align: center;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+}
+
+.card-footer > a {
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  padding: 8px 16px;
+  font-weight: 500;
+  font-size: 20px;
+
+  color: #ffffff;
+  background: #1b76c5;
+  border-radius: 4px;
+}
+
+/* Developer section */
+.devTitle {
+  text-align: left;
+  margin: 10px;
+}
+
+.devLogoImg {
+  margin-top: clamp(80px, 20vh, 300px);
+  padding: 20px;
+}
+
+#imgAdvt {
+  width: 100%;
+  height: auto;
+  border-radius: 10%;
+}
+
+/* Marquee */
+.marquee1 > marquee {
+  height: 200px;
+  margin: clamp(40px, 15vh, 200px) 10px 0;
+}
+
+/* Help link */
+.help {
+  text-align: center;
+  text-decoration: none;
+  justify-content: flex-end;
+  color: #000;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* OSM branding */
+.osm-img {
+  display: block;
+  margin: 20px auto;
+
+  width: 100px;
+  border-radius: 10px;
+}
+
+.osm {
+  text-transform: uppercase;
+  font-size: 25px;
+  font-weight: 800;
+}
+
+/* ======================== Inside School Events ========================*/
+
+/* ================================
+   INSIDE SCHOOL – TABS (TABLE STYLE)
+   ================================ */
+
+#insideSchool {
+  padding: 60px 0;
+  background: #f7f7f7;
+}
+
+.insideTitle {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+  background: linear-gradient(to bottom, #32a0dd, #80b66b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 30px;
+}
+
+/* ---------- Tab headers (table columns) ---------- */
+.insideTabs .nav {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid #fdfdfd;
+  margin-bottom: 30px;
+}
+
+.insideTabs .nav-item {
+  flex: 1;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.insideTabs .nav-link {
+  width: 100%;
+  border: none;
+  background: transparent;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 15px 10px;
+  color: #555;
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s ease;
+}
+
+/* Active tab = active column */
+.insideTabs .nav-link.active {
+  color: #fcfcfc;
+  border-bottom: 3px solid #2c8fdd;
+  background: linear-gradient(to bottom, #32a0dd, #80b66b);
+}
+
+/* Hover effect */
+.insideTabs .nav-link:hover {
+  color: #2c8fdd;
+}
+
+/* ---------- Tab content area (table body) ---------- */
+.tab-content {
+  background: #fff;
+  padding: 30px;
+  border-radius: 6px;
+  min-height: 300px;
+}
+
+/* Hide all panes by default (JS controls visibility) */
+.tab-pane {
+  display: none;
+}
+
+/* Show only active pane */
+.tab-pane.active {
+  display: block;
+}
+
+/* ---------- Cards ---------- */
+.card {
+  border: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.Mi-Thumbnail {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+/* ---------- Read More button ---------- */
+.readMoreInside {
+  margin-top: 30px;
+}
+
+.readMoreBtn {
+  padding: 10px 25px;
+  background: linear-gradient(90deg, #2c8fdd, #7bbf6a);
+  color: #fff;
+  border-radius: 25px;
+  text-transform: uppercase;
+  font-size: 14px;
+  transition: background 0.3s ease;
+}
+
+.readMoreBtn:hover {
+  background: linear-gradient(90deg, #7bbf6a, #2c8fdd);
+  color: #fff;
+}
+
+#king1 {
+  width: 120px;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .insideTabs .nav {
+    flex-direction: column;
+  }
+
+  .insideTabs .nav-link {
+    border-bottom: 1px solid #ddd;
+  }
+}
+
+/* =====================================
+   EVENTS TAB – SINGLE ROW WITH DIVIDERS
+   ===================================== */
+
+/* Target ONLY the Events tab */
+#pills-profile .row {
+  display: flex;
+  flex-wrap: nowrap;
+  /* stay on one line */
+  gap: 0;
+}
+
+/* Each event column */
+#pills-profile .col {
+  flex: 1;
+  /* equal width */
+  padding: 0 20px;
+  position: relative;
+}
+
+/* Vertical divider (black line) */
+#pills-profile .col:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 10%;
+  right: 0;
+  width: 2px;
+  height: 80%;
+  background-color: #000;
+}
+
+/* Card styling cleanup */
+#pills-profile .card {
+  box-shadow: none;
+  border: none;
+  background: transparent;
+}
+
+/* Ensure image + content stay side-by-side */
+#pills-profile .card .row {
+  display: flex;
+  align-items: center;
+}
+
+/* Image column */
+#pills-profile .col-md-5 {
+  flex: 0 0 40%;
+}
+
+/* Text column */
+#pills-profile .col-md-7 {
+  flex: 0 0 60%;
+  padding-left: 15px;
+}
+
+/* Image sizing */
+#pills-profile img.Mi-Thumbnail {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+/* Title */
+#pills-profile .card-title {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* Description */
+#pills-profile .card-text {
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+/* ======================
+   RESPONSIVE (MOBILE)
+   ====================== */
+@media (max-width: 992px) {
+  #pills-profile .row {
+    flex-wrap: wrap;
+  }
+
+  #pills-profile .col {
+    flex: 100%;
+    padding: 15px 0;
+  }
+
+  #pills-profile .col::after {
+    display: none;
+  }
+}
+
+/* =====================================================
+   INSIDE SCHOOL – ALL TABS TABLE-LIKE HORIZONTAL LAYOUT
+   ===================================================== */
+
+/* Common layout for ALL tab panes */
+#pills-profile .row,
+#pills-home .row,
+#pills-contact .row {
+  display: flex;
+  flex-wrap: nowrap;
+  /* force single row */
+  gap: 0;
+}
+
+/* Each item behaves like a table column */
+#pills-profile .col,
+#pills-home .col,
+#pills-contact .col {
+  flex: 1;
+  padding: 0 20px;
+  position: relative;
+}
+
+/* Vertical black divider between items */
+#pills-profile .col:not(:last-child)::after,
+#pills-home .col:not(:last-child)::after,
+#pills-contact .col:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 10%;
+  right: 0;
+  width: 2px;
+  height: 80%;
+  background-color: #000;
+}
+
+/* Remove card box look */
+#pills-profile .card,
+#pills-home .card,
+#pills-contact .card {
+  border: none;
+  box-shadow: none;
+  background: transparent;
+}
+
+/* Force image + content side-by-side */
+#pills-profile .card .row,
+#pills-home .card .row,
+#pills-contact .card .row {
+  display: flex;
+  align-items: center;
+}
+
+/* Image column */
+#pills-profile .col-md-5,
+#pills-home .col-md-5,
+#pills-contact .col-md-5 {
+  flex: 0 0 40%;
+}
+
+/* Content column */
+#pills-profile .col-md-7,
+#pills-home .col-md-7,
+#pills-contact .col-md-7 {
+  flex: 0 0 60%;
+  padding-left: 15px;
+}
+
+/* Image styling */
+#pills-profile img.Mi-Thumbnail,
+#pills-home img.Mi-Thumbnail,
+#pills-contact img.Mi-Thumbnail {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+/* Titles */
+#pills-profile .card-title,
+#pills-home .card-title,
+#pills-contact .card-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+/* Text */
+#pills-profile .card-text,
+#pills-home .card-text,
+#pills-contact .card-text {
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+/* =========================
+   READ MORE BUTTON ALIGNMENT
+   ========================= */
+.readMoreInside {
+  margin-top: 25px;
+}
+
+/* =========================
+   RESPONSIVE (MOBILE)
+   ========================= */
+@media (max-width: 992px) {
+  #pills-profile .row,
+  #pills-home .row,
+  #pills-contact .row {
+    flex-wrap: wrap;
+  }
+
+  #pills-profile .col,
+  #pills-home .col,
+  #pills-contact .col {
+    flex: 100%;
+    padding: 15px 0;
+  }
+
+  #pills-profile .col::after,
+  #pills-home .col::after,
+  #pills-contact .col::after {
+    display: none;
+  }
+}
+
+/*=============================== PHOTOS ================================*/
+
+.photos-container {
+  width: 100%;
+  box-sizing: border-box;
+  background: #eee;
+  border: 1px solid #eee;
+}
+
+#photoPanelBox {
+  width: 100%;
+}
+
+.sectionTitle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px;
+}
+
+#lblPhoto {
+  text-transform: uppercase;
+  font-size: 34px;
+  background: -webkit-linear-gradient(#32a0dd, #80b66b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ---------- Slider container ---------- */
+.photosSliders {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+/* ---------- Viewport ---------- */
+.img-list {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* ---------- Moving track ---------- */
+.img-track {
+  display: flex;
+  padding: 0px 20px;
+  will-change: transform;
+}
+
+/* ---------- Individual slide ---------- */
+.img-slide {
+  flex: 0 0 calc(100% / 3);
+  /* 3 images visible */
+  padding: 0 25px;
+  box-sizing: border-box;
+}
+
+.img-slide:hover {
+  cursor: pointer;
+}
+
+/* ---------- Images ---------- */
+.img-slide img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+  user-select: none;
+  pointer-events: none;
+}
+
+/* ---------- Cursor feedback ---------- */
+.img-track:active {
+  cursor: grabbing;
+}
+
+/*============================== FOOTER ===============================*/
+
+/* ============================ CONTACT US =============================*/
+
+#contact-section {
+  width: 100%;
+  margin: 0;
+  background: linear-gradient(90deg, #26a8f2 0%, #8abf57 50%) !important;
+
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.contact-container1 {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.contact-container2 {
+  width: 100%;
+
+  /* FIX: replace margin with padding */
+  padding: clamp(15px, 4vw, 20px) clamp(16px, 6vw, 60px);
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+  color: #fff;
+
+  box-sizing: border-box;
+}
+
+.contact-us-container3 {
+  flex: 1 1 250px;
+  min-width: 0;
+}
+
+/* ---------- Scroll container ---------- */
+#boxscroll2 {
+  max-height: 260px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 6px;
+  scroll-behavior: smooth;
+
+  box-sizing: border-box;
+}
+
+/* ---------- Spacing between items ---------- */
+.Mi-Quick-Link {
+  margin-bottom: 6px;
+}
+
+/* ---------- Custom scrollbar ---------- */
+#boxscroll2::-webkit-scrollbar {
+  width: 6px;
+}
+
+#boxscroll2::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+#boxscroll2::-webkit-scrollbar-thumb {
+  background: #82e782;
+  border-radius: 10px;
+}
+
+#boxscroll2::-webkit-scrollbar-thumb:hover {
+  background: #4cae4c;
+}
+
+/* ---------- Firefox scrollbar ---------- */
+#boxscroll2 {
+  scrollbar-width: thin;
+  scrollbar-color: #5cb85c #f1f1f1;
+}
+
+/* ---------- Titles ---------- */
+.footerTitle {
+  color: #fff;
+  border-bottom: 2px solid #0e801c;
+  font-size: 15pt;
+  border-radius: 10px;
+  padding-bottom: 6px;
+  text-transform: uppercase;
+}
+
+/* ---------- Quick links ---------- */
+.Mi-Quick-Link {
+  position: relative;
+  overflow: hidden;
+  padding: 5px;
+  border-radius: 6px;
+  border: 1px solid #5cb85c;
+}
+
+.Mi-Quick-Link::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, #26a8f2 0%, #8abf57 50%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 0;
+}
+
+.Mi-Quick-Link:hover::before {
+  opacity: 1;
+}
+
+.Mi-Quick-Link a {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  display: block;
+  text-decoration: none;
+}
+
+/* ---------- Map ---------- */
+.map-container {
+  width: 100%;
+  max-width: 80%;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .map-container {
+    max-width: 100%;
+  }
+}
+
+/*====================== COPYRIGHT SECTION ========================*/
+
+.Copyright-section {
+  width: 100%;
+  position: relative;
+  /* anchor for floating button */
+}
+
+.Mi-Footer-More-Btn {
+  position: absolute;
+  top: -18px;
+  /* floats slightly above footer */
+  right: 20px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #000;
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 36px;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  z-index: 50;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+}
+
+/* Minus hidden by default */
+.Mi-Footer-More-Btn.minus {
+  display: none;
+}
+
+/* ===================== FOOTER MENU ===================== */
+
+.davFooterMenuList {
+  width: 100%;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.45s ease;
+}
+
+.footerTopMenu {
+  padding-left: 80px;
+}
+
+.Mi-Footer-Submenu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.Mi-Footer-Submenu li > a {
+  text-decoration: none;
+  color: #e1e1e1;
+  font-size: x-small;
+}
+
+.Mi-Footer-Submenu li > a:hover {
+  text-decoration: none;
+  color: #fffefe;
+}
+
+/* Expanded state */
+.Copyright-section.footer-open .davFooterMenuList {
+  max-height: 900px;
+}
+
+/* Toggle visibility */
+.Copyright-section.footer-open .Mi-Footer-More-Btn.plus {
+  display: none;
+}
+
+.Copyright-section.footer-open .Mi-Footer-More-Btn.minus {
+  display: block;
+}
+
+/* ===================== COPYRIGHT BAR ===================== */
+
+.Mi-Footer-Copy-Write-Info {
+  width: 100%;
+  background: #0c58a2;
+  color: #fff;
+}
+
+.Mi-Footer-Copy-Write-Info .container {
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 8px 60px;
+  text-align: left;
+}
