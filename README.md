@@ -14,7 +14,6 @@ Welcome to the official repository for the School website. This project aims to 
 - 📚 **Resource Portal:** Easy access to digital libraries, syllabi, and homework.
 - 🖼️ **Gallery:** A visual journey through our campus life and achievements.
 - ✉️ **Contact Hub:** Direct communication channels for parents and staff.
-- 🌗 **Dark Mode Support:** (Optional) Because late-night studying is real!
 
 ---
 
