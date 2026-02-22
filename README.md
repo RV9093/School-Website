@@ -6,8 +6,6 @@
 ## 🌟 Overview
 Welcome to the official repository for the School website. This project aims to provide a seamless digital experience for our school community, offering everything from real-time announcements to academic resources in one sleek interface.
 
-[Live Demo Link (if any)] | [Report Bug] | [Request Feature]
-
 ---
 
 ## ✨ Key Features
